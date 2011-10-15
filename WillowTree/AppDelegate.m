@@ -7,12 +7,11 @@
 //
 
 #import "AppDelegate.h"
-#import "RootViewController.h"
+#import <SBJson/SBJson.h>
 
 @implementation AppDelegate
 
 @synthesize window = _window;
-@synthesize rootViewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -21,19 +20,9 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
-    // We need a rootViewController (although this might not be the way to do it)
-    rootViewController = [[RootViewController alloc] init];
-    self.window.rootViewController = rootViewController;
-    
-    
     // Playing with grabbing a user timeline
     RKClient *client = [RKClient clientWithBaseURL:@"http://api.twitter.com/1/statuses/user_timeline.json"];
-    [client get: @"?screen_name=willowtreeapps" delegate: self];
-    
-    UILabel *label = [[UILabel alloc] init];
-    label.text = @"Foo";
-
-    rootViewController.view = label;
+    [client get: @"?screen_name=willowtreeapps&count=100" delegate: self];
     
     [self.window makeKeyAndVisible];
     
@@ -42,14 +31,14 @@
 
 - (void)request:(RKRequest*)request didLoadResponse:(RKResponse*)response
 {
-    // Grabbed the timeline in didFinishLaunchingWithOptions
-    // Logging here
-    NSLog(@"%@", [response bodyAsString]);  
-
-    UIViewController *c = self.window.rootViewController;
-    UILabel *label = [[UILabel alloc] init];
-    label.text = [response bodyAsString];
-    c.view = label;
+    SBJsonParser *jsonParser = [[SBJsonParser alloc] init];
+    NSError *error = nil;
+    NSArray *jsonObjects = [jsonParser objectWithString:[response bodyAsString] error:&error];
+    
+    for (NSDictionary *jsonObject in jsonObjects)
+    {
+        NSLog(@"%@", [jsonObject valueForKey:@"text"]);
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
