@@ -15,10 +15,23 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    // Playing with grabbing a user timeline
+    RKClient* client = [RKClient clientWithBaseURL:@"http://api.twitter.com/1/statuses/user_timeline.json"];
+    [client get: @"?screen_name=willowtreeapps" delegate: self];
+    
     return YES;
+}
+
+- (void)request:(RKRequest*)request didLoadResponse:(RKResponse*)response
+{
+    // Grabbed the timeline in didFinishLaunchingWithOptions
+    // Logging here
+    NSLog(@"%@", [response bodyAsString]);  
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
