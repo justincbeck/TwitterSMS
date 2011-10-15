@@ -21,13 +21,13 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
-    // We need a rootViewController
+    // We need a rootViewController (although this might not be the way to do it)
     rootViewController = [[RootViewController alloc] init];
     self.window.rootViewController = rootViewController;
     
     
     // Playing with grabbing a user timeline
-    RKClient* client = [RKClient clientWithBaseURL:@"http://api.twitter.com/1/statuses/user_timeline.json"];
+    RKClient *client = [RKClient clientWithBaseURL:@"http://api.twitter.com/1/statuses/user_timeline.json"];
     [client get: @"?screen_name=willowtreeapps" delegate: self];
     
     UILabel *label = [[UILabel alloc] init];
