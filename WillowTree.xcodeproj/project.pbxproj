@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		980ACE7F14493DDD0063F4FB /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 980ACE7E14493DDD0063F4FB /* RootViewController.m */; };
 		98A8D2951448AD3A00E04346 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98A8D2941448AD3A00E04346 /* UIKit.framework */; };
 		98A8D2971448AD3A00E04346 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98A8D2961448AD3A00E04346 /* Foundation.framework */; };
 		98A8D2991448AD3A00E04346 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98A8D2981448AD3A00E04346 /* CoreGraphics.framework */; };
@@ -113,6 +114,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		980ACE7D14493DDD0063F4FB /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		980ACE7E14493DDD0063F4FB /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		98A8D2901448AD3A00E04346 /* WillowTree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WillowTree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98A8D2941448AD3A00E04346 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		98A8D2961448AD3A00E04346 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -195,6 +198,8 @@
 			children = (
 				98A8D2A31448AD3A00E04346 /* AppDelegate.h */,
 				98A8D2A41448AD3A00E04346 /* AppDelegate.m */,
+				980ACE7D14493DDD0063F4FB /* RootViewController.h */,
+				980ACE7E14493DDD0063F4FB /* RootViewController.m */,
 				98A8D29B1448AD3A00E04346 /* Supporting Files */,
 			);
 			path = WillowTree;
@@ -257,6 +262,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = BeckProduct;
 			};
 			buildConfigurationList = 98A8D28A1448AD3A00E04346 /* Build configuration list for PBXProject "WillowTree" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -380,6 +386,7 @@
 			files = (
 				98A8D2A11448AD3A00E04346 /* main.m in Sources */,
 				98A8D2A51448AD3A00E04346 /* AppDelegate.m in Sources */,
+				980ACE7F14493DDD0063F4FB /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

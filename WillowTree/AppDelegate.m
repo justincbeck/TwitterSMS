@@ -3,14 +3,16 @@
 //  WillowTree
 //
 //  Created by Justin Beck on 10/14/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2011 BeckProduct. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "RootViewController.h"
 
 @implementation AppDelegate
 
 @synthesize window = _window;
+@synthesize rootViewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -18,11 +20,22 @@
     
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+    
+    // We need a rootViewController
+    rootViewController = [[RootViewController alloc] init];
+    self.window.rootViewController = rootViewController;
+    
     
     // Playing with grabbing a user timeline
     RKClient* client = [RKClient clientWithBaseURL:@"http://api.twitter.com/1/statuses/user_timeline.json"];
     [client get: @"?screen_name=willowtreeapps" delegate: self];
+    
+    UILabel *label = [[UILabel alloc] init];
+    label.text = @"Foo";
+
+    rootViewController.view = label;
+    
+    [self.window makeKeyAndVisible];
     
     return YES;
 }
@@ -32,6 +45,11 @@
     // Grabbed the timeline in didFinishLaunchingWithOptions
     // Logging here
     NSLog(@"%@", [response bodyAsString]);  
+
+    UIViewController *c = self.window.rootViewController;
+    UILabel *label = [[UILabel alloc] init];
+    label.text = [response bodyAsString];
+    c.view = label;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
