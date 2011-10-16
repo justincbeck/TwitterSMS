@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "RootView.h"
 #import <SBJson/SBJson.h>
 
 @implementation AppDelegate
@@ -16,6 +17,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    CGRect wholeWindow = [[self window] bounds];
+    view = [[RootView alloc] initWithFrame:wholeWindow];
+    [view setBackgroundColor:[UIColor clearColor]];
+    
+    [[self window] addSubview:view];
     
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];

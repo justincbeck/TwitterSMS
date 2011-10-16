@@ -9,7 +9,12 @@
 #import <UIKit/UIKit.h>
 #import <RestKit/RestKit.h>
 
+@class RootView;
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate, RKRequestDelegate>
+{
+    RootView *view;
+}
 
 @property (strong, nonatomic) UIWindow *window;
 
