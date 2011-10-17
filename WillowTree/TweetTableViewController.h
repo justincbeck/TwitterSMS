@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <RestKit/RestKit.h>
+#import <MessageUI/MessageUI.h>
 
-@interface TweetTableViewController : UITableViewController <RKRequestDelegate>
+@interface TweetTableViewController : UITableViewController <RKRequestDelegate, MFMessageComposeViewControllerDelegate>
 {
     NSMutableArray *tweetData;
     BOOL dataLoaded;

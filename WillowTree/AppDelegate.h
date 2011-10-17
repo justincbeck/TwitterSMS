@@ -9,9 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
-{
-    NSArray *tweetData;
-}
 
 @property (strong, nonatomic) UIWindow *window;
 

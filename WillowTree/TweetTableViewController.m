@@ -139,13 +139,19 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    MFMessageComposeViewController *controller = [[MFMessageComposeViewController alloc] init];
+	if([MFMessageComposeViewController canSendText])
+	{
+        // TODO: I might have to enter a number too?
+		controller.body = [[tweetData objectAtIndex:[indexPath row]] valueForKey:@"text"];
+		controller.messageComposeDelegate = self;
+		[self presentModalViewController:controller animated:YES];
+	}
+}
+
+- (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result
+{
+	[self dismissModalViewControllerAnimated:YES];
 }
 
 @end
