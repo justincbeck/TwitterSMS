@@ -58,7 +58,7 @@
     tweetData = [jsonParser objectWithString:[response bodyAsString] error:nil];
     dataLoaded = YES;
 
-    [self.tableView reloadData];
+    [[self tableView] reloadData];
 }
 
 - (void)viewDidUnload
@@ -126,10 +126,10 @@
     
     if (dataLoaded == YES)
     {
-        cell.textLabel.text = [[tweetData objectAtIndex:[indexPath row]] valueForKey:@"text"];
-        cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
-        cell.textLabel.numberOfLines = 0;
-        cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:12.0];
+        [[cell textLabel] setText: [[tweetData objectAtIndex:[indexPath row]] valueForKey:@"text"]];
+        [[cell textLabel] setFont: [UIFont fontWithName:@"Helvetica" size:12.0]];
+        [[cell textLabel] setLineBreakMode: UILineBreakModeWordWrap];
+        [[cell textLabel] setNumberOfLines:0];
     }
     
     return cell;
@@ -142,12 +142,13 @@
     MFMessageComposeViewController *controller = [[MFMessageComposeViewController alloc] init];
 	if([MFMessageComposeViewController canSendText])
 	{
-        // TODO: I might have to enter a number too?
-		controller.body = [[tweetData objectAtIndex:[indexPath row]] valueForKey:@"text"];
-		controller.messageComposeDelegate = self;
+		[controller setBody: [[tweetData objectAtIndex:[indexPath row]] valueForKey:@"text"]];
+		[controller setMessageComposeDelegate:self];
 		[self presentModalViewController:controller animated:YES];
 	}
 }
+
+#pragma mark - Message view delegate
 
 - (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result
 {
