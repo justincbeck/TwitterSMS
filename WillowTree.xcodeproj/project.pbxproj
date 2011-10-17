@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		98259743144A1A38000CF172 /* RootView.m in Sources */ = {isa = PBXBuildFile; fileRef = 98259742144A1A38000CF172 /* RootView.m */; };
 		98259748144B1B45000CF172 /* libRestKitJSONParserJSONKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98259735144A1464000CF172 /* libRestKitJSONParserJSONKit.a */; };
 		98259749144B1B45000CF172 /* libRestKitNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98259729144A1464000CF172 /* libRestKitNetwork.a */; };
 		9825974A144B1B45000CF172 /* libRestKitObjectMapping.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9825972B144A1464000CF172 /* libRestKitObjectMapping.a */; };
 		9825974B144B1B45000CF172 /* libRestKitSupport.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9825972D144A1464000CF172 /* libRestKitSupport.a */; };
 		9825974C144B1B45000CF172 /* libRestKitXMLParserLibxml.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98259737144A1464000CF172 /* libRestKitXMLParserLibxml.a */; };
 		9825974E144B1B80000CF172 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9825974D144B1B80000CF172 /* CoreData.framework */; };
+		98259751144B6F87000CF172 /* TweetTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98259750144B6F87000CF172 /* TweetTableViewController.m */; };
 		98A8D2951448AD3A00E04346 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98A8D2941448AD3A00E04346 /* UIKit.framework */; };
 		98A8D2971448AD3A00E04346 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98A8D2961448AD3A00E04346 /* Foundation.framework */; };
 		98A8D2991448AD3A00E04346 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98A8D2981448AD3A00E04346 /* CoreGraphics.framework */; };
@@ -153,9 +153,9 @@
 
 /* Begin PBXFileReference section */
 		98259714144A1464000CF172 /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = ../RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
-		98259741144A1A38000CF172 /* RootView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootView.h; path = ../RootView.h; sourceTree = "<group>"; };
-		98259742144A1A38000CF172 /* RootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootView.m; path = ../RootView.m; sourceTree = "<group>"; };
 		9825974D144B1B80000CF172 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		9825974F144B6F87000CF172 /* TweetTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetTableViewController.h; sourceTree = "<group>"; };
+		98259750144B6F87000CF172 /* TweetTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetTableViewController.m; sourceTree = "<group>"; };
 		98A8D2901448AD3A00E04346 /* WillowTree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WillowTree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98A8D2941448AD3A00E04346 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		98A8D2961448AD3A00E04346 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -261,8 +261,8 @@
 			children = (
 				98A8D2A31448AD3A00E04346 /* AppDelegate.h */,
 				98A8D2A41448AD3A00E04346 /* AppDelegate.m */,
-				98259741144A1A38000CF172 /* RootView.h */,
-				98259742144A1A38000CF172 /* RootView.m */,
+				9825974F144B6F87000CF172 /* TweetTableViewController.h */,
+				98259750144B6F87000CF172 /* TweetTableViewController.m */,
 				98A8D29B1448AD3A00E04346 /* Supporting Files */,
 			);
 			path = WillowTree;
@@ -474,7 +474,7 @@
 			files = (
 				98A8D2A11448AD3A00E04346 /* main.m in Sources */,
 				98A8D2A51448AD3A00E04346 /* AppDelegate.m in Sources */,
-				98259743144A1A38000CF172 /* RootView.m in Sources */,
+				98259751144B6F87000CF172 /* TweetTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

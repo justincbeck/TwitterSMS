@@ -7,8 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "RootView.h"
-#import <SBJson/SBJson.h>
+#import "TweetTableViewController.h"
 
 @implementation AppDelegate
 
@@ -17,35 +16,15 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    
-    CGRect wholeWindow = [[self window] bounds];
-    view = [[RootView alloc] initWithFrame:wholeWindow];
-    [view setBackgroundColor:[UIColor clearColor]];
-    
-    [[self window] addSubview:view];
-    
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
     
-    // Playing with grabbing a user timeline
-    RKClient *client = [RKClient clientWithBaseURL:@"http://api.twitter.com/1/statuses/user_timeline.json"];
-    [client get: @"?screen_name=willowtreeapps&count=100" delegate: self];
-    
-    [self.window makeKeyAndVisible];
+    TweetTableViewController *rootViewController = [[TweetTableViewController alloc] init];
+    self.window.rootViewController = rootViewController;
+
+    [[self window] setBackgroundColor:[UIColor whiteColor]];
+    [[self window] makeKeyAndVisible];
     
     return YES;
-}
-
-- (void)request:(RKRequest*)request didLoadResponse:(RKResponse*)response
-{
-    SBJsonParser *jsonParser = [[SBJsonParser alloc] init];
-    NSError *error = nil;
-    NSArray *jsonObjects = [jsonParser objectWithString:[response bodyAsString] error:&error];
-    
-    for (NSDictionary *jsonObject in jsonObjects)
-    {
-        NSLog(@"%@", [jsonObject valueForKey:@"text"]);
-    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

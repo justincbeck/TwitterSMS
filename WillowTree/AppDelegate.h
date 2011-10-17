@@ -7,13 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <RestKit/RestKit.h>
 
-@class RootView;
-
-@interface AppDelegate : UIResponder <UIApplicationDelegate, RKRequestDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
 {
-    RootView *view;
+    NSArray *tweetData;
 }
 
 @property (strong, nonatomic) UIWindow *window;
