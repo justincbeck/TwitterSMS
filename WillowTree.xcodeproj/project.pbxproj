@@ -14,6 +14,7 @@
 		9825974C144B1B45000CF172 /* libRestKitXMLParserLibxml.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98259737144A1464000CF172 /* libRestKitXMLParserLibxml.a */; };
 		9825974E144B1B80000CF172 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9825974D144B1B80000CF172 /* CoreData.framework */; };
 		98259751144B6F87000CF172 /* TweetTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98259750144B6F87000CF172 /* TweetTableViewController.m */; };
+		9897EAD8144D0DCB00C67B29 /* libsbjson-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9897EAD3144D0D0600C67B29 /* libsbjson-ios.a */; };
 		98A8D2951448AD3A00E04346 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98A8D2941448AD3A00E04346 /* UIKit.framework */; };
 		98A8D2971448AD3A00E04346 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98A8D2961448AD3A00E04346 /* Foundation.framework */; };
 		98A8D2991448AD3A00E04346 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98A8D2981448AD3A00E04346 /* CoreGraphics.framework */; };
@@ -26,7 +27,6 @@
 		98A8D3551449255200E04346 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 98A8D3511449255200E04346 /* libxml2.dylib */; };
 		98A8D3561449255200E04346 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98A8D3521449255200E04346 /* MobileCoreServices.framework */; };
 		98A8D3571449255200E04346 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98A8D3531449255200E04346 /* SystemConfiguration.framework */; };
-		98FD809B144A04DA00F54890 /* libsbjson-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98FD8095144A04AF00F54890 /* libsbjson-ios.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,37 +114,37 @@
 			remoteGlobalIDString = 255B7588133BABBF00ED76AD;
 			remoteInfo = RestKit;
 		};
-		98FD8090144A04AF00F54890 /* PBXContainerItemProxy */ = {
+		9897EACE144D0D0600C67B29 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 98FD8086144A04AF00F54890 /* SBJson.xcodeproj */;
+			containerPortal = 9897EAC4144D0D0600C67B29 /* SBJson.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = BC12323D1391D5CC00131607;
 			remoteInfo = SBJson;
 		};
-		98FD8092144A04AF00F54890 /* PBXContainerItemProxy */ = {
+		9897EAD0144D0D0600C67B29 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 98FD8086144A04AF00F54890 /* SBJson.xcodeproj */;
+			containerPortal = 9897EAC4144D0D0600C67B29 /* SBJson.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = BC1232521391D5CC00131607;
 			remoteInfo = SBJsonTests;
 		};
-		98FD8094144A04AF00F54890 /* PBXContainerItemProxy */ = {
+		9897EAD2144D0D0600C67B29 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 98FD8086144A04AF00F54890 /* SBJson.xcodeproj */;
+			containerPortal = 9897EAC4144D0D0600C67B29 /* SBJson.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = BCC2626913920FC7003D9994;
 			remoteInfo = "sbjson-ios";
 		};
-		98FD8096144A04AF00F54890 /* PBXContainerItemProxy */ = {
+		9897EAD4144D0D0600C67B29 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 98FD8086144A04AF00F54890 /* SBJson.xcodeproj */;
+			containerPortal = 9897EAC4144D0D0600C67B29 /* SBJson.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = BCC2627313920FC7003D9994;
 			remoteInfo = "sbjson-iosTests";
 		};
-		98FD8099144A04BD00F54890 /* PBXContainerItemProxy */ = {
+		9897EAD6144D0DAB00C67B29 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 98FD8086144A04AF00F54890 /* SBJson.xcodeproj */;
+			containerPortal = 9897EAC4144D0D0600C67B29 /* SBJson.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = BCC2626813920FC7003D9994;
 			remoteInfo = "sbjson-ios";
@@ -156,6 +156,7 @@
 		9825974D144B1B80000CF172 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		9825974F144B6F87000CF172 /* TweetTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetTableViewController.h; sourceTree = "<group>"; };
 		98259750144B6F87000CF172 /* TweetTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetTableViewController.m; sourceTree = "<group>"; };
+		9897EAC4144D0D0600C67B29 /* SBJson.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SBJson.xcodeproj; path = "json-framework/SBJson.xcodeproj"; sourceTree = "<group>"; };
 		98A8D2901448AD3A00E04346 /* WillowTree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WillowTree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98A8D2941448AD3A00E04346 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		98A8D2961448AD3A00E04346 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -172,7 +173,6 @@
 		98A8D3511449255200E04346 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		98A8D3521449255200E04346 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		98A8D3531449255200E04346 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		98FD8086144A04AF00F54890 /* SBJson.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SBJson.xcodeproj; path = "../json-framework/SBJson.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +180,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9897EAD8144D0DCB00C67B29 /* libsbjson-ios.a in Frameworks */,
 				9825974E144B1B80000CF172 /* CoreData.framework in Frameworks */,
 				98A8D3541449255200E04346 /* CFNetwork.framework in Frameworks */,
 				98A8D3551449255200E04346 /* libxml2.dylib in Frameworks */,
@@ -190,7 +191,6 @@
 				9825974A144B1B45000CF172 /* libRestKitObjectMapping.a in Frameworks */,
 				9825974B144B1B45000CF172 /* libRestKitSupport.a in Frameworks */,
 				9825974C144B1B45000CF172 /* libRestKitXMLParserLibxml.a in Frameworks */,
-				98FD809B144A04DA00F54890 /* libsbjson-ios.a in Frameworks */,
 				98A8D2AE1448DB0000E04346 /* MessageUI.framework in Frameworks */,
 				98A8D2AC1448B2AB00E04346 /* Twitter.framework in Frameworks */,
 				98A8D2951448AD3A00E04346 /* UIKit.framework in Frameworks */,
@@ -220,12 +220,23 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		9897EAC5144D0D0600C67B29 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9897EACF144D0D0600C67B29 /* SBJson.framework */,
+				9897EAD1144D0D0600C67B29 /* SBJsonTests.octest */,
+				9897EAD3144D0D0600C67B29 /* libsbjson-ios.a */,
+				9897EAD5144D0D0600C67B29 /* sbjson-iosTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		98A8D2851448AD3A00E04346 = {
 			isa = PBXGroup;
 			children = (
 				9825974D144B1B80000CF172 /* CoreData.framework */,
 				98259714144A1464000CF172 /* RestKit.xcodeproj */,
-				98FD8086144A04AF00F54890 /* SBJson.xcodeproj */,
+				9897EAC4144D0D0600C67B29 /* SBJson.xcodeproj */,
 				98A8D3501449255100E04346 /* CFNetwork.framework */,
 				98A8D3511449255200E04346 /* libxml2.dylib */,
 				98A8D3521449255200E04346 /* MobileCoreServices.framework */,
@@ -279,17 +290,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		98FD8087144A04AF00F54890 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				98FD8091144A04AF00F54890 /* SBJson.framework */,
-				98FD8093144A04AF00F54890 /* SBJsonTests.octest */,
-				98FD8095144A04AF00F54890 /* libsbjson-ios.a */,
-				98FD8097144A04AF00F54890 /* sbjson-iosTests.octest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -304,8 +304,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				9897EAD7144D0DAB00C67B29 /* PBXTargetDependency */,
 				98259747144B1B18000CF172 /* PBXTargetDependency */,
-				98FD809A144A04BD00F54890 /* PBXTargetDependency */,
 			);
 			name = WillowTree;
 			productName = WillowTree;
@@ -337,8 +337,8 @@
 					ProjectRef = 98259714144A1464000CF172 /* RestKit.xcodeproj */;
 				},
 				{
-					ProductGroup = 98FD8087144A04AF00F54890 /* Products */;
-					ProjectRef = 98FD8086144A04AF00F54890 /* SBJson.xcodeproj */;
+					ProductGroup = 9897EAC5144D0D0600C67B29 /* Products */;
+					ProjectRef = 9897EAC4144D0D0600C67B29 /* SBJson.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -426,32 +426,32 @@
 			remoteRef = 9825973C144A1464000CF172 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		98FD8091144A04AF00F54890 /* SBJson.framework */ = {
+		9897EACF144D0D0600C67B29 /* SBJson.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = SBJson.framework;
-			remoteRef = 98FD8090144A04AF00F54890 /* PBXContainerItemProxy */;
+			remoteRef = 9897EACE144D0D0600C67B29 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		98FD8093144A04AF00F54890 /* SBJsonTests.octest */ = {
+		9897EAD1144D0D0600C67B29 /* SBJsonTests.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = SBJsonTests.octest;
-			remoteRef = 98FD8092144A04AF00F54890 /* PBXContainerItemProxy */;
+			remoteRef = 9897EAD0144D0D0600C67B29 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		98FD8095144A04AF00F54890 /* libsbjson-ios.a */ = {
+		9897EAD3144D0D0600C67B29 /* libsbjson-ios.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libsbjson-ios.a";
-			remoteRef = 98FD8094144A04AF00F54890 /* PBXContainerItemProxy */;
+			remoteRef = 9897EAD2144D0D0600C67B29 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		98FD8097144A04AF00F54890 /* sbjson-iosTests.octest */ = {
+		9897EAD5144D0D0600C67B29 /* sbjson-iosTests.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "sbjson-iosTests.octest";
-			remoteRef = 98FD8096144A04AF00F54890 /* PBXContainerItemProxy */;
+			remoteRef = 9897EAD4144D0D0600C67B29 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -486,10 +486,10 @@
 			name = RestKit;
 			targetProxy = 98259746144B1B18000CF172 /* PBXContainerItemProxy */;
 		};
-		98FD809A144A04BD00F54890 /* PBXTargetDependency */ = {
+		9897EAD7144D0DAB00C67B29 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "sbjson-ios";
-			targetProxy = 98FD8099144A04BD00F54890 /* PBXContainerItemProxy */;
+			targetProxy = 9897EAD6144D0DAB00C67B29 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
