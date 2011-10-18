@@ -158,14 +158,14 @@
 		9825974F144B6F87000CF172 /* TweetTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetTableViewController.h; sourceTree = "<group>"; };
 		98259750144B6F87000CF172 /* TweetTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetTableViewController.m; sourceTree = "<group>"; };
 		9897EAC4144D0D0600C67B29 /* SBJson.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SBJson.xcodeproj; path = "json-framework/SBJson.xcodeproj"; sourceTree = "<group>"; };
-		98A8D2901448AD3A00E04346 /* WillowTree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WillowTree.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		98A8D2901448AD3A00E04346 /* TwitterSMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterSMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98A8D2941448AD3A00E04346 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		98A8D2961448AD3A00E04346 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		98A8D2981448AD3A00E04346 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		98A8D29C1448AD3A00E04346 /* WillowTree-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WillowTree-Info.plist"; sourceTree = "<group>"; };
+		98A8D29C1448AD3A00E04346 /* TwitterSMS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TwitterSMS-Info.plist"; sourceTree = "<group>"; };
 		98A8D29E1448AD3A00E04346 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		98A8D2A01448AD3A00E04346 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		98A8D2A21448AD3A00E04346 /* WillowTree-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WillowTree-Prefix.pch"; sourceTree = "<group>"; };
+		98A8D2A21448AD3A00E04346 /* TwitterSMS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TwitterSMS-Prefix.pch"; sourceTree = "<group>"; };
 		98A8D2A31448AD3A00E04346 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		98A8D2A41448AD3A00E04346 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		98A8D2AB1448B2AB00E04346 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
@@ -244,7 +244,7 @@
 				98A8D3511449255200E04346 /* libxml2.dylib */,
 				98A8D3521449255200E04346 /* MobileCoreServices.framework */,
 				98A8D3531449255200E04346 /* SystemConfiguration.framework */,
-				98A8D29A1448AD3A00E04346 /* WillowTree */,
+				98A8D29A1448AD3A00E04346 /* TwitterSMS */,
 				98A8D2931448AD3A00E04346 /* Frameworks */,
 				98A8D2911448AD3A00E04346 /* Products */,
 			);
@@ -253,7 +253,7 @@
 		98A8D2911448AD3A00E04346 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				98A8D2901448AD3A00E04346 /* WillowTree.app */,
+				98A8D2901448AD3A00E04346 /* TwitterSMS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -270,7 +270,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		98A8D29A1448AD3A00E04346 /* WillowTree */ = {
+		98A8D29A1448AD3A00E04346 /* TwitterSMS */ = {
 			isa = PBXGroup;
 			children = (
 				98A8D2A31448AD3A00E04346 /* AppDelegate.h */,
@@ -279,16 +279,17 @@
 				98259750144B6F87000CF172 /* TweetTableViewController.m */,
 				98A8D29B1448AD3A00E04346 /* Supporting Files */,
 			);
+			name = TwitterSMS;
 			path = WillowTree;
 			sourceTree = "<group>";
 		};
 		98A8D29B1448AD3A00E04346 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				98A8D29C1448AD3A00E04346 /* WillowTree-Info.plist */,
+				98A8D29C1448AD3A00E04346 /* TwitterSMS-Info.plist */,
 				98A8D29D1448AD3A00E04346 /* InfoPlist.strings */,
 				98A8D2A01448AD3A00E04346 /* main.m */,
-				98A8D2A21448AD3A00E04346 /* WillowTree-Prefix.pch */,
+				98A8D2A21448AD3A00E04346 /* TwitterSMS-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -296,9 +297,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		98A8D28F1448AD3A00E04346 /* WillowTree */ = {
+		98A8D28F1448AD3A00E04346 /* TwitterSMS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 98A8D2A81448AD3A00E04346 /* Build configuration list for PBXNativeTarget "WillowTree" */;
+			buildConfigurationList = 98A8D2A81448AD3A00E04346 /* Build configuration list for PBXNativeTarget "TwitterSMS" */;
 			buildPhases = (
 				98A8D28C1448AD3A00E04346 /* Sources */,
 				98A8D28D1448AD3A00E04346 /* Frameworks */,
@@ -310,9 +311,9 @@
 				9897EAD7144D0DAB00C67B29 /* PBXTargetDependency */,
 				98259747144B1B18000CF172 /* PBXTargetDependency */,
 			);
-			name = WillowTree;
+			name = TwitterSMS;
 			productName = WillowTree;
-			productReference = 98A8D2901448AD3A00E04346 /* WillowTree.app */;
+			productReference = 98A8D2901448AD3A00E04346 /* TwitterSMS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -324,7 +325,7 @@
 				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = BeckProduct;
 			};
-			buildConfigurationList = 98A8D28A1448AD3A00E04346 /* Build configuration list for PBXProject "WillowTree" */;
+			buildConfigurationList = 98A8D28A1448AD3A00E04346 /* Build configuration list for PBXProject "TwitterSMS" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -346,7 +347,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				98A8D28F1448AD3A00E04346 /* WillowTree */,
+				98A8D28F1448AD3A00E04346 /* TwitterSMS */,
 			);
 		};
 /* End PBXProject section */
@@ -558,11 +559,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "WillowTree/WillowTree-Prefix.pch";
+				GCC_PREFIX_HEADER = "WillowTree/TwitterSMS-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(SOURCE_ROOT)/RestKit/Build\"";
-				INFOPLIST_FILE = "WillowTree/WillowTree-Info.plist";
+				INFOPLIST_FILE = "WillowTree/TwitterSMS-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TwitterSMS;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -571,11 +572,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "WillowTree/WillowTree-Prefix.pch";
+				GCC_PREFIX_HEADER = "WillowTree/TwitterSMS-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(SOURCE_ROOT)/RestKit/Build\"";
-				INFOPLIST_FILE = "WillowTree/WillowTree-Info.plist";
+				INFOPLIST_FILE = "WillowTree/TwitterSMS-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TwitterSMS;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -583,7 +584,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		98A8D28A1448AD3A00E04346 /* Build configuration list for PBXProject "WillowTree" */ = {
+		98A8D28A1448AD3A00E04346 /* Build configuration list for PBXProject "TwitterSMS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				98A8D2A61448AD3A00E04346 /* Debug */,
@@ -592,7 +593,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		98A8D2A81448AD3A00E04346 /* Build configuration list for PBXNativeTarget "WillowTree" */ = {
+		98A8D2A81448AD3A00E04346 /* Build configuration list for PBXNativeTarget "TwitterSMS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				98A8D2A91448AD3A00E04346 /* Debug */,

@@ -16,4 +16,6 @@
     BOOL dataLoaded;
 }
 
+@property (nonatomic) BOOL dataLoaded;
+
 @end

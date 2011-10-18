@@ -12,6 +12,8 @@
 
 @implementation TweetTableViewController
 
+@synthesize dataLoaded;
+
 - (void) loadView
 {
     dataLoaded = NO;
@@ -20,6 +22,8 @@
     [tweetView setBackgroundColor:[UIColor whiteColor]];
     
     [self setTableView:tweetView];
+    
+    NSLog(@"%@", @"loadView");
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -48,24 +52,19 @@
     if (dataLoaded == NO)
     {
         RKClient *client = [RKClient clientWithBaseURL:@"http://api.twitter.com/1/statuses/user_timeline.json"];
-        [client get: @"?screen_name=willowtreeapps&count=100" delegate: self];
+        [client get:@"?screen_name=justincbeck&count=100" delegate:self];
     }
-}
-
-- (void)request:(RKRequest *)request didLoadResponse:(RKResponse *)response
-{
-    SBJsonParser *jsonParser = [[SBJsonParser alloc] init];
-    tweetData = [jsonParser objectWithString:[response bodyAsString] error:nil];
-    dataLoaded = YES;
-
-    [[self tableView] reloadData];
+    
+    NSLog(@"%@", @"viewDidLoad");
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+
+    dataLoaded = NO;
+    
+    NSLog(@"%@", @"viewDidUnload");
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -126,13 +125,26 @@
     
     if (dataLoaded == YES)
     {
-        [[cell textLabel] setText: [[tweetData objectAtIndex:[indexPath row]] valueForKey:@"text"]];
-        [[cell textLabel] setFont: [UIFont fontWithName:@"Helvetica" size:12.0]];
-        [[cell textLabel] setLineBreakMode: UILineBreakModeWordWrap];
+        [[cell textLabel] setText:[[tweetData objectAtIndex:[indexPath row]] valueForKey:@"text"]];
+        [[cell textLabel] setFont:[UIFont fontWithName:@"Helvetica" size:12.0]];
+        [[cell textLabel] setLineBreakMode:UILineBreakModeWordWrap];
         [[cell textLabel] setNumberOfLines:0];
     }
     
     return cell;
+}
+
+#pragma mark - RestKit delegate
+
+- (void)request:(RKRequest *)request didLoadResponse:(RKResponse *)response
+{
+    SBJsonParser *jsonParser = [[SBJsonParser alloc] init];
+    tweetData = [jsonParser objectWithString:[response bodyAsString] error:nil];
+    dataLoaded = YES;
+    
+    [[self tableView] reloadData];
+    
+    NSLog(@"%@", @"didLoadResponse");
 }
 
 #pragma mark - Table view delegate
@@ -142,7 +154,7 @@
     MFMessageComposeViewController *controller = [[MFMessageComposeViewController alloc] init];
 	if([MFMessageComposeViewController canSendText])
 	{
-		[controller setBody: [[tweetData objectAtIndex:[indexPath row]] valueForKey:@"text"]];
+		[controller setBody:[[tweetData objectAtIndex:[indexPath row]] valueForKey:@"text"]];
 		[controller setMessageComposeDelegate:self];
 		[self presentModalViewController:controller animated:YES];
 	}
@@ -152,6 +164,7 @@
 
 - (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result
 {
+    // TODO: Need some flow control here
 	[self dismissModalViewControllerAnimated:YES];
 }
 

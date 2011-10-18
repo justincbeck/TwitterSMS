@@ -17,11 +17,29 @@
 {
     window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    [window setRootViewController: [[TweetTableViewController alloc] init]];
+    [window setRootViewController:[[TweetTableViewController alloc] init]];
     [window setBackgroundColor:[UIColor whiteColor]];
     [window makeKeyAndVisible];
     
+    NSLog(@"%@", @"didFinishLaunchingWithOptions");
+    
     return YES;
+}
+
+- (void)applicationDidEnterBackground:(UIApplication *)application
+{
+    NSLog(@"%@", @"applicationDidEnterBackground");
+}
+
+- (void)applicationWillTerminate:(UIApplication *)application
+{
+    NSLog(@"%@", @"applicationWillTerminate");
+}
+
+- (void)applicationWillEnterForeground:(UIApplication *)application
+{
+    NSLog(@"%@", @"applicationWillEnterForeground");
+    [[window rootViewController] loadView];
 }
 
 @end
