@@ -26,20 +26,4 @@
     return YES;
 }
 
-- (void)applicationDidEnterBackground:(UIApplication *)application
-{
-    NSLog(@"%@", @"applicationDidEnterBackground");
-}
-
-- (void)applicationWillTerminate:(UIApplication *)application
-{
-    NSLog(@"%@", @"applicationWillTerminate");
-}
-
-- (void)applicationWillEnterForeground:(UIApplication *)application
-{
-    NSLog(@"%@", @"applicationWillEnterForeground");
-    [[window rootViewController] loadView];
-}
-
 @end

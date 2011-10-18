@@ -22,8 +22,6 @@
     [tweetView setBackgroundColor:[UIColor whiteColor]];
     
     [self setTableView:tweetView];
-    
-    NSLog(@"%@", @"loadView");
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -54,8 +52,6 @@
         RKClient *client = [RKClient clientWithBaseURL:@"http://api.twitter.com/1/statuses/user_timeline.json"];
         [client get:@"?screen_name=justincbeck&count=100" delegate:self];
     }
-    
-    NSLog(@"%@", @"viewDidLoad");
 }
 
 - (void)viewDidUnload
@@ -63,8 +59,6 @@
     [super viewDidUnload];
 
     dataLoaded = NO;
-    
-    NSLog(@"%@", @"viewDidUnload");
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -143,8 +137,6 @@
     dataLoaded = YES;
     
     [[self tableView] reloadData];
-    
-    NSLog(@"%@", @"didLoadResponse");
 }
 
 #pragma mark - Table view delegate

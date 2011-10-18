@@ -13,7 +13,6 @@
 @interface TweetTableViewController : UITableViewController <RKRequestDelegate, MFMessageComposeViewControllerDelegate>
 {
     NSMutableArray *tweetData;
-    BOOL dataLoaded;
 }
 
 @property (nonatomic) BOOL dataLoaded;
