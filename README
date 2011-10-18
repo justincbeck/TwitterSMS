@@ -1,0 +1,11 @@
+WillowTree Test
+
+This is my test project for application to WillowTree Apps.
+
+To use this project you must clone it and then initialize it's submodules as follows:
+
+1) git submodule init
+2) git submodule update
+3) git submodule foreach git checkout master
+
+After these steps have been taken, the project should build and run correctly.

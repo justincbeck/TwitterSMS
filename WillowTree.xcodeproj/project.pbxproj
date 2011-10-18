@@ -27,6 +27,7 @@
 		98A8D3551449255200E04346 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 98A8D3511449255200E04346 /* libxml2.dylib */; };
 		98A8D3561449255200E04346 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98A8D3521449255200E04346 /* MobileCoreServices.framework */; };
 		98A8D3571449255200E04346 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98A8D3531449255200E04346 /* SystemConfiguration.framework */; };
+		98D1D4B5144D10BE00D758AA /* README in Resources */ = {isa = PBXBuildFile; fileRef = 98D1D4B4144D10BE00D758AA /* README */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -173,6 +174,7 @@
 		98A8D3511449255200E04346 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		98A8D3521449255200E04346 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		98A8D3531449255200E04346 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		98D1D4B4144D10BE00D758AA /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +236,7 @@
 		98A8D2851448AD3A00E04346 = {
 			isa = PBXGroup;
 			children = (
+				98D1D4B4144D10BE00D758AA /* README */,
 				9825974D144B1B80000CF172 /* CoreData.framework */,
 				98259714144A1464000CF172 /* RestKit.xcodeproj */,
 				9897EAC4144D0D0600C67B29 /* SBJson.xcodeproj */,
@@ -462,6 +465,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				98A8D29F1448AD3A00E04346 /* InfoPlist.strings in Resources */,
+				98D1D4B5144D10BE00D758AA /* README in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
