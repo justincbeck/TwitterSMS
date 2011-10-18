@@ -12,12 +12,8 @@
 
 @implementation TweetTableViewController
 
-@synthesize dataLoaded;
-
 - (void) loadView
 {
-    dataLoaded = NO;
-    
     UITableView *tweetView = [[UITableView alloc] initWithFrame:CGRectZero];
     [tweetView setBackgroundColor:[UIColor whiteColor]];
     
@@ -28,7 +24,7 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
+        tweetData = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -47,18 +43,16 @@
 {
     [super viewDidLoad];
     
-    if (dataLoaded == NO)
+    if ([tweetData count] == 0)
     {
         RKClient *client = [RKClient clientWithBaseURL:@"http://api.twitter.com/1/statuses/user_timeline.json"];
-        [client get:@"?screen_name=justincbeck&count=100" delegate:self];
+        [client get:@"?screen_name=willowtreeapps&count=100" delegate:self];
     }
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-
-    dataLoaded = NO;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -98,14 +92,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    if (dataLoaded == YES)
-    {
-        return [tweetData count];
-    }
-    else
-    {
-        return 0;
-    }
+    return [tweetData count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -117,7 +104,7 @@
     if (cell == nil)
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     
-    if (dataLoaded == YES)
+    if ([tweetData count] != 0)
     {
         [[cell textLabel] setText:[[tweetData objectAtIndex:[indexPath row]] valueForKey:@"text"]];
         [[cell textLabel] setFont:[UIFont fontWithName:@"Helvetica" size:12.0]];
@@ -134,7 +121,6 @@
 {
     SBJsonParser *jsonParser = [[SBJsonParser alloc] init];
     tweetData = [jsonParser objectWithString:[response bodyAsString] error:nil];
-    dataLoaded = YES;
     
     [[self tableView] reloadData];
 }

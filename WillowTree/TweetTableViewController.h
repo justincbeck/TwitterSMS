@@ -15,6 +15,4 @@
     NSMutableArray *tweetData;
 }
 
-@property (nonatomic) BOOL dataLoaded;
-
 @end

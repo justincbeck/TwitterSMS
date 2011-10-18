@@ -21,8 +21,6 @@
     [window setBackgroundColor:[UIColor whiteColor]];
     [window makeKeyAndVisible];
     
-    NSLog(@"%@", @"didFinishLaunchingWithOptions");
-    
     return YES;
 }
 
