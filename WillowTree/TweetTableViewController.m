@@ -9,6 +9,7 @@
 #import "TweetTableViewController.h"
 
 #import <SBJson/SBJson.h>
+#import <RestKit/RestKit.h>
 
 @implementation TweetTableViewController
 
