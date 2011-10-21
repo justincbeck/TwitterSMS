@@ -100,13 +100,10 @@
 {
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];    
     
-    if ([tweetData count] != 0)
-    {
-        [[cell textLabel] setText:[[tweetData objectAtIndex:[indexPath row]] valueForKey:@"text"]];
-        [[cell textLabel] setFont:[UIFont fontWithName:@"Helvetica" size:12.0]];
-        [[cell textLabel] setLineBreakMode:UILineBreakModeWordWrap];
-        [[cell textLabel] setNumberOfLines:0];
-    }
+    [[cell textLabel] setText:[[tweetData objectAtIndex:[indexPath row]] valueForKey:@"text"]];
+    [[cell textLabel] setFont:[UIFont fontWithName:@"Helvetica" size:12.0]];
+    [[cell textLabel] setLineBreakMode:UILineBreakModeWordWrap];
+    [[cell textLabel] setNumberOfLines:0];
     
     return cell;
 }
